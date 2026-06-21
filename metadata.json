@@ -1,0 +1,6 @@
+{
+  "name": "Restaurant POS and Management System",
+  "description": "An offline-first restaurant billing application. Includes billing/POS with custom taxes, digital receipts, thermal receipt print layout, inventory tracking, multi-branch switching, shift scheduling, and customer loyalty program.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

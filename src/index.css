@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base style resets and scrollbars */
+html, body, #root {
+  background-color: #fafafa;
+  color: #1c1917;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* Custom transitions and scrollbar styled nicely */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c2c2c2;
+}
+
+/* Receipt print layout helper */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #thermal-receipt-print-area, #thermal-receipt-print-area * {
+    visibility: visible;
+  }
+  #thermal-receipt-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm; /* standard thermal print size */
+    font-size: 11px;
+    padding: 2mm;
+    margin: 0;
+    color: black;
+    background: white;
+  }
+}
